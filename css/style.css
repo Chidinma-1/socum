@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:"lato",sans-serif;
+}
+
+.body{
+    height: 100vh;
+    width: 100%;
+    /* letter-spacing used for space between text*/
+}
+
+.container{
+    display: flex;
+}
+.desc-container{
+    height: 100vh;
+    width: 55%;
+    padding: 50px 120px 120px 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85) rgba(0, 0, 0, 0.85)), url("../image/office.jpg");
+    background-position: center;
+}
+.header a{
+    font-size: 20px;
+    color: yellow;
+    /* text decoration is used to remove the line underneath the link */
+    text-decoration: none;   
+}
+
+.main p{
+color: white;
+font-size: 48px;
+font-weight: 300;
+/* gives text spacing default is one */
+line-height: 1.3;
+margin-bottom: 40px;
+}
+
+.btn{
+    padding: 10px 20px;
+    display:flex;
+    align-items: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0px;
+}
+/*------ To hover on the button we use the semicolon -----*/
+.btn:hover{
+
+    background-color: yellow;
+    transition: all 500ms linear;
+}
+
+.icon{
+    margin-left: 40px;
+}
+
+.footer ul{
+display: flex;
+}
+
+.footer-list {
+    /* to remove the white bullet points on the list we use list-style */
+    list-style:none;
+    margin-right: 20px;
+}
+
+.footer-link{
+    color: yellow;
+    text-decoration: none;
+}
+
+.footer-link:hover{
+    color: white;
+    transition: all 500ms linear;
+}
+
+.sign-up-container {
+    background-color: white;
+    height: 100vh;
+    width:45%;
+    /* top right bottom left (padding using clock-wise direction) we also used the padding of the bottom to allign*/
+    padding: 50px 50px 120px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sign-up-header{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sign-up-header .icon{
+    font-size: 20px;
+}
+
+.input-container h3{
+    font-size: 32px;
+    font-weight: 400;
+    /* instead of breakline all the time use text width */
+    width: 80;
+    line-height: 1.5;
+}
+
+.form{
+    margin-top: 50px;
+}
+
+.form-field{
+    display:flex;
+    align-items: center;
+    margin-bottom: 13px;
+}
+/* icon is acting as a text here in the i tag and for images you use width */
+.form-field i{
+    color: grey;
+    margin-right: 30px;
+    font-size: 25px;
+}
+.form-field input{
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid  grey;
+    outline: 0;
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.form-field input:focus{
+    border-bottom:  1px solid black;
+}
+
+.action-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+}
+/* focus is on the text */
+/* .form-field input:focus{
+    border-bottom: 1px solid red;
+} */
+.action-container button{
+    display: flex;
+    align-items: center;
+    padding: 10x 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0;
+    background-color: yellow;
+    color: black;
+}
+
+.action-container button:hover {
+    background-color: black;
+    color: white;
+    transition: all 500ms linear;
+}
+.action-container i{
+margin-left: 40px;
+}
+
+.action-container a{
+    color: grey;
+    text-decoration: none;
+    border-bottom: 1px solid grey;
+    padding-bottom: 3px;
+}
+/* RESPONSIVENESS: SHOULD BE WRITTEN AT THE BOTTOM  */
+/* FOR LARGER SCREEN */
+@media screen and (min-width: 768px) {
+    .sign-up-header a{
+       display:none;
+    }
+}  
+@media screen and (max-width: 1048px) {
+        .desc-container {
+            padding-left: 70px;
+        }
+        .sign-up-container{
+            padding-left: 70px;
+        }
+    }
+
+    /* FOR TABLETS */
+    @media screen and (max-width:768) {
+        .des-container{
+            display:none;
+        }
+        
+        .sign-up-container{
+            width:100%;
+            padding:50px;
+        }
+        .sign-up-header{
+            justify-content: space-between;
+        }
+        .sign-up-header {
+            display: inline;
+            color: orange;
+            text-decoration: none;
+            font-size:20px
+        }
+    }
+    /* MOBILE DEVICE */
+    @media screen and (max-width:600px){
+        .sign-up-container{
+            padding: 50px 30px;
+        }
+
+        .sign-up-container h3 {
+            width: 100%;
+            font-size: 22px;
+        }
+        .action-container i {
+            margin-left: 20px;
+        }
+    }
